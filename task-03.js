@@ -15,4 +15,6 @@ const images = [
 
 const ulList = document.querySelector(".gallery");
 
-images.forEach(element => {ulList.insertAdjacentHTML('beforeend' , `<li class="itemOfGallery"><img width="300px" height="200px" src=${element.url}></li>`)});
+
+const markupStrokesArr = images.map((element) => `<li class="itemOfGallery"><img width="300px" height="200px" src=${element.url}></li>`).join('');
+ulList.insertAdjacentHTML('beforeend', markupStrokesArr);
